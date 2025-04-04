@@ -3,5 +3,5 @@ git status: (git status -s "to see the short format")
 	- git will compare files from STAGING AREA and LOCAL REPOSITORY. If it sees any file with difference content, it will display as "modifiled" and "file stageD, already to commit". If it see any new file (file does not exist in local repository), it will display as added file. If it see file is deleted (file does exist in staging area but exist in local repository), it will display as deleted.
 	
 git init:
-	- git init <directory> or git init . will transfer regular <directory> to git directory with .git/ inside.
-	- git init --bare will create a "local remote" repository-liked without the working tree, only have .git/. We can not manipulate regular work on that. Used for another repository to push or fetch.
+	- git init <directory> or git init . will transfer regular <directory> to git directory with .git/ inside. At the time running git init <directory>, it will have no branch until we push very first to remote repository. That commit also will create the branch to remote repository.
+	- git init --bare will create a "local remote" repository-liked without the working tree, only have subdirectories of .git/ (even no .git/ directory). We can not manipulate regular work on that. Used for another repository to push or fetch. At the time creating "bare" repository, it will have no branch until another local repository push a commit to.
